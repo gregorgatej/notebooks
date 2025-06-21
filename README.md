@@ -12,7 +12,7 @@ This notebook focuses on optimizing vector search operations by comparing implem
 
 Explores methods to detect near duplicates in data using Jaccard similarity and MinHashing techniques.
 
-### Topic Modeling of Austrian Reddit Posts Using BERTopic*
+### Topic Modeling of Austrian Reddit Posts Using BERTopic *
 
 Demonstrates the use of BERTopic for topic modeling on Reddit posts related to Austria, from the period of the 2024 European Parliament elections. It includes data preprocessing, topic extraction, and visualization of topic trends over time. The analysis uncovers key themes in the Reddit dataset, leveraging statistical learning and unsupervised clustering of keywords.
 
