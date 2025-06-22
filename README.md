@@ -1,10 +1,10 @@
 # Collection of Jupyter Notebooks
 
-This repository contains Jupyter notebooks, covering distinct topics I've been researching.
+This repository contains Jupyter notebooks, covering distinct topics I've been researching. For them to be rendered properly I advise you to access them through nbviewer by clicking on the headings below.
 
 ## Notebooks
 
-### Vector search optimization using NVIDIA Nsight Systems
+### [Vector search optimization using NVIDIA Nsight Systems](https://nbviewer.org/github/gregorgatej/notebooks/blob/master/Vector_search_optimization_using_NVIDIA%20Nsight%20Systems/Vector_search_optimization_using_NVIDIA%20Nsight%20Systems.ipynb)
 
 This notebook focuses on optimizing vector search operations by comparing implementations such as Faiss, cuVS, and CuPy. It uses NVIDIA Nsight Systems for profiling and performance analysis to enhance GPU-accelerated nearest neighbor search speed and scalability.
 
