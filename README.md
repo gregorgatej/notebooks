@@ -2,7 +2,7 @@
 
 This repository contains Jupyter notebooks, covering distinct topics I've been researching. 
 
-For them to be rendered properly I advise you to access them through [__nbviewer__](https://nbviewer.org/) by clicking on the __headings__ below.
+For them to be rendered properly I advise you to access them through [nbviewer](https://nbviewer.org/) by clicking on the __headings__ below.
 
 ## Overview
 
