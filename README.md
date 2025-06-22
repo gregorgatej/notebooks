@@ -2,9 +2,9 @@
 
 This repository contains Jupyter notebooks, covering distinct topics I've been researching. 
 
-For them to be rendered properly I advise you to access them through __nbviewer__ by clicking on the __headings__ below.
+For them to be rendered properly I advise you to access them through [__nbviewer__](https://nbviewer.org/) by clicking on the __headings__ below.
 
-## Notebooks
+## Overview
 
 ### [Vector search optimization using NVIDIA Nsight Systems](https://nbviewer.org/github/gregorgatej/notebooks/blob/master/Vector_search_optimization_using_NVIDIA%20Nsight%20Systems/Vector_search_optimization_using_NVIDIA%20Nsight%20Systems.ipynb)
 
