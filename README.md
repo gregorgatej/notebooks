@@ -6,7 +6,7 @@ For better rendering, I advise you to view the notebooks in direct HTML format b
 
 ## Overview
 
-### [Vector search optimization using NVIDIA Nsight Systems](Vector_search_optimization_using_NVIDIA%20Nsight%20Systems/Vector_search_optimization_using_NVIDIA%20Nsight%20Systems.html)
+### [Vector search optimization using NVIDIA Nsight Systems](Vector_search_optimization_using_NVIDIA_Nsight_Systems/Vector_search_optimization_using_NVIDIA_Nsight_Systems.html)
 
 This notebook focuses on optimizing vector search operations by comparing implementations such as Faiss, cuVS, and CuPy. It uses NVIDIA Nsight Systems for profiling and performance analysis to enhance GPU-accelerated nearest neighbor search speed and scalability.
 
