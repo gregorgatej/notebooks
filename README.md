@@ -1,6 +1,6 @@
 # Collection of Jupyter Notebooks
 
-This repository contains Jupyter notebooks, covering distinct topics I've been researching. 
+This repository contains Jupyter notebooks, covering distinct data science topics I've been researching.
 
 For better rendering, I advise you to view the notebooks in direct HTML format by clicking on the headings below.
 
