@@ -5,119 +5,208 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Science Notebooks</title>
     <style>
+        :root {
+            --color-primary-dark: #2c5aa0;
+            --color-primary-medium: #4a6fa5;
+            --color-primary-light: #a8c5f0;
+            --color-primary-lighter: #b8d4f1;
+            --color-primary-lightest: #c8e0f5;
+            --color-secondary: #6a7fa5;
+            --color-secondary-light: #7a8fa5;
+            --color-button-hover: #375282;
+            --color-text-dark: #333;
+            --color-text-light: #f5f9fd;
+            --color-border: #d0e0f0;
+            --color-white: #ffffff;
+            
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-2xl: 3rem;
+            
+            --radius-sm: 5px;
+            --radius-md: 6px;
+            --radius-lg: 8px;
+            --radius-xl: 10px;
+
+            --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-size-base: 1rem;
+            --font-size-sm: 0.9rem;
+            --font-size-subtitle: 1.1rem;
+            --font-size-h2: 1.5rem;
+            --font-size-h1: 2.5rem;
+            --line-height: 1.6;
+            
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: var(--font-family);
+            line-height: var(--line-height);
+            color: var(--color-text-dark);
+            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary-lighter) 50%, var(--color-primary-lightest) 100%);
             min-height: 100vh;
-            padding: 2rem;
+            padding: var(--spacing-xl);
         }
         
         .container {
             max-width: 900px;
             margin: 0 auto;
-            background: white;
-            border-radius: 10px;
-            padding: 3rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: #333;
-        }
-        
-        .subtitle {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 3rem;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 1.5rem;
+            background: var(--color-white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-2xl);
+            box-shadow: 0 10px 40px rgba(100, 150, 200, 0.15);
         }
         
         .notebooks {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 2rem;
+            gap: var(--spacing-xl);
+        }
+        
+        h1 {
+            font-size: var(--font-size-h1);
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-primary-medium);
+        }
+        
+        .subtitle {
+            font-size: var(--font-size-subtitle);
+            color: var(--color-primary-medium);
+            margin-bottom: var(--spacing-2xl);
+            border-bottom: 2px solid var(--color-primary-light);
+            padding-bottom: var(--spacing-lg);
         }
         
         .notebook-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            background: #f9f9f9;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            transition: all var(--transition-normal);
+            background: var(--color-text-light);
         }
         
         .notebook-card:hover {
-            border-color: #667eea;
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.1);
+            border-color: var(--color-primary-light);
+            box-shadow: 0 5px 20px rgba(168, 197, 240, 0.15);
             transform: translateY(-2px);
         }
         
         .notebook-card h2 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: #333;
-        }
-        
-        .notebook-card a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.2s ease;
-        }
-        
-        .notebook-card a:hover {
-            color: #764ba2;
-            text-decoration: underline;
+            font-size: var(--font-size-h2);
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-primary-dark);
         }
         
         .notebook-card p {
-            color: #666;
-            margin: 1rem 0;
-            line-height: 1.7;
+            color: var(--color-primary-medium);
+            margin: var(--spacing-md) 0;
+            line-height: var(--line-height);
+        }
+        
+        .notebook-card img {
+            margin: var(--spacing-lg) 0;
+            border-radius: var(--radius-md);
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border: 2px solid var(--color-primary-dark);
+        }
+        
+        .notebook-card img + p {
+            font-size: var(--font-size-sm);
+            color: var(--color-secondary);
+            font-style: italic;
+        }
+        
+        .notebook-card > h2 > a {
+            color: inherit;
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        .notebook-card > h2 > a:hover {
+            color: var(--color-primary-dark);
+        }
+        
+        footer a {
+            color: var(--color-primary-medium);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        footer a:hover {
+            color: var(--color-primary-dark);
+            text-decoration: underline;
         }
         
         .view-link {
             display: inline-block;
-            margin-top: 1rem;
-            padding: 0.75rem 1.5rem;
-            background: #667eea;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.2s ease;
+            margin-top: var(--spacing-md);
+            padding: var(--spacing-md) var(--spacing-lg);
+            background: var(--color-primary-medium);
+            color: var(--color-white) !important;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-weight: 600;
+            text-decoration: none !important;
+            cursor: pointer;
+            transition: background var(--transition-fast);
         }
         
         .view-link:hover {
-            background: #764ba2;
+            background: var(--color-button-hover);
+            color: var(--color-white) !important;
+            text-decoration: none !important;
+        }
+        
+        .view-link:active {
+            transform: scale(0.98);
         }
         
         footer {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid #ddd;
+            margin-top: var(--spacing-2xl);
+            padding-top: var(--spacing-xl);
+            border-top: 1px solid var(--color-border);
             text-align: center;
-            color: #999;
-            font-size: 0.9rem;
+            color: var(--color-secondary-light);
+            font-size: var(--font-size-sm);
         }
         
         @media (max-width: 768px) {
             .container {
-                padding: 1.5rem;
+                padding: var(--spacing-lg);
             }
             
             h1 {
                 font-size: 1.8rem;
+            }
+            
+            body {
+                padding: var(--spacing-md);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .notebook-card {
+                padding: var(--spacing-md);
             }
         }
     </style>
@@ -133,6 +222,8 @@
             <div class="notebook-card">
                 <h2><a href="Vector_search_optimization_using_NVIDIA_Nsight_Systems/Vector_search_optimization_using_NVIDIA_Nsight_Systems.html">Vector search optimization using NVIDIA Nsight Systems</a></h2>
                 <p>This notebook focuses on optimizing vector search operations by comparing implementations such as Faiss, cuVS, and CuPy. It uses NVIDIA Nsight Systems for profiling and performance analysis to enhance GPU-accelerated nearest neighbor search speed and scalability.</p>
+                <img src="images/nsight.png" alt="CUDA Kernel Execution Timeline for Vector Search" width="100%"/>
+                <p><em>Timeline visualization from NVIDIA Nsight Systems showing the execution of CUDA kernels and memory operations during the vector search process.</em></p>
                 <a href="Vector_search_optimization_using_NVIDIA_Nsight_Systems/Vector_search_optimization_using_NVIDIA_Nsight_Systems.html" class="view-link">View Notebook</a>
             </div>
             
@@ -145,6 +236,8 @@
             <div class="notebook-card">
                 <h2><a href="Topic_modeling_of_Austrian_Reddit_posts_using_BERTopic/Topic_modeling_of_Austrian_Reddit_posts_using_BERTopic.html">Topic Modeling of Austrian Reddit Posts Using BERTopic</a></h2>
                 <p>Demonstrates the use of BERTopic for topic modeling on Reddit posts related to Austria, from the period of the 2024 European Parliament elections. It includes data preprocessing, topic extraction, and visualization of topic trends over time. The analysis uncovers key themes in the Reddit dataset, leveraging statistical learning and unsupervised clustering of keywords.</p>
+                <img src="images/topics_over_time.png" alt="Topics Over Time During the Austrian Election Cycle" width="100%"/>
+                <p><em>This graph visualizes the frequency of selected discussion topics on Austrian Reddit over time, highlighting how public sentiment aligns with the election cycle.</em></p>
                 <a href="Topic_modeling_of_Austrian_Reddit_posts_using_BERTopic/Topic_modeling_of_Austrian_Reddit_posts_using_BERTopic.html" class="view-link">View Notebook</a>
             </div>
             
